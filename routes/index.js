@@ -1,10 +1,9 @@
 import express from "express";
+import { validateToken } from "../middlewares/authVerification.js";
+import {jsonPatchData} from "../controllers/indexController.js"
 
-var router = express.Router();
+let router = express.Router();
 
-/* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('index', { title: 'Express' });
-// });
+router.post("/patch", validateToken, jsonPatchData);
 
 export default router;
