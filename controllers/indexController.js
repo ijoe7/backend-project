@@ -14,25 +14,10 @@ export const jsonPatchData = (req, res) => {
     }
     try {
         const { jsonObj, jsonPatchObj} = req.body;
-        // const patchData = {
-        //     jsonObj: {
-        //         firstName: firstName,
-        //         lastName: lastName,
-        //         gender: gender,
-        //         age: age,
-        //         status: status
-        //     },
-        //     jsonPatchObj: [{
-        //         op: op,
-        //         from: from,
-        //         path: path,
-        //         value: value
-        //     }]
-        // }
         const patchedDoc = jsonpatch.apply_patch(jsonObj, jsonPatchObj);
         res.status(201).json({message: "Data Edited", patchedDoc})
     } catch (error) {
-        res.status(400).json({ message: "Error patching data" });
+        res.status(400).json({ message: "Error patching data"});
     }
 }
 

@@ -22,7 +22,7 @@ export const validateToken = async (req, res, next) => {
             res.status(401).json({ result });
         }
     } catch (error) {
-        console.log(error)
+        res.status(401).json({message: "Token expired"})
     };
 };
 

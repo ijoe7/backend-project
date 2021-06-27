@@ -7,6 +7,7 @@
     "start": "nodemon ./bin/www"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "debug": "~2.6.9",
     "dotenv": "^10.0.0",
     "express": "^4.16.4",
@@ -15,14 +16,12 @@
     "joi": "^17.4.0",
     "jsonpatch": "^3.0.1",
     "jsonwebtoken": "^8.5.1",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "node-image-downloader": "^1.0.7",
+    "node-image-resizer": "^1.0.0"
   },
   "devDependencies": {
-    "@types/cookie-parser": "^1.4.2",
     "@types/express": "^4.17.12",
-    "@types/http-errors": "^1.8.0",
-    "@types/jsonwebtoken": "^8.5.2",
-    "@types/morgan": "^1.9.2",
     "@types/node": "^15.12.4",
     "@types/nodemon": "^1.19.0",
     "cookie-parser": "~1.4.4",
